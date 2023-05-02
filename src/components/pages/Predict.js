@@ -9,7 +9,7 @@ export default function Predict() {
   const [predictionLabel, setPredictionLabel] = useState(null);
 
   async function loadModel() {
-    const loadedModel = await tf.loadLayersModel("https://raw.githubusercontent.com/Qbitman/brain-tumor-detection/main/model.json");
+    const loadedModel = await tf.loadLayersModel("https://raw.githubusercontent.com/Qbitman/brain-tumor-detect/master/model.json");
     console.log("Model loaded");
     setModel(loadedModel);
   }
@@ -57,7 +57,7 @@ export default function Predict() {
         <h4>Prediction Output</h4>
         <div className='imageSize'>
         <div className='uploadedImage'>
-        {imageSrc && <img src={imageSrc} alt="Uploaded image" style={{ maxWidth: '100%', height: 'auto' }} />}
+        {imageSrc && <img src={imageSrc} alt="Uploaded" style={{ maxWidth: '100%', height: 'auto' }} />}
         </div>
         </div>
         <div className='outputText'>
